@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage[polish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{caption}
+\usepackage[a4paper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\parindent = 0pt
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\title{Przetwarzanie danych w Agisoft Metashape}
+\author{Julia Gomulska (328936)}
+
+\begin{document}
+\maketitle
+
+\section{Interfejs programu}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{Interfejs.png}
+    \caption{Interfejs programu}
+\end{figure}
+
+\section{Działanie programu}
+
+Po uruchomieniu programu należy kolejno:
+\begin{enumerate}
+    \item Nacisnąć przycisk \textit{Select Photos Directory} i wybrać folder ze zdjęciami
+    \item Nacisnąć przycisk \textit{Select Markers File} i wybrać plik z markerami
+    \item Nacisnąć przycisk \textit{Select CRS for Markers File} i wybrać układ współrzędnych, w którym zostały zapisane współrzędne markerów; do tego układu zostaną przeliczone zdjęcia.
+    \item Wybrać parametry dotyczące wyrównania zdjęć, chmury punktów i modelu.
+    \item Nacisnąć przycisk \textit{Do all for 3} i poczekać na zakończenie przetwarzania, którego efektem będzie chmura punktów i model zapisane w katalogu ze zdjęciami.
+    \item Nacisnąć przycisk \textit{Start measuring markers} i pomierzyć trzy markery na trzech zdjęciach. Należy zwrócić uwagę na to, by markery nie były zlokalizowane obok siebie, lecz w większej odległości.
+    \item Nacisnąć przycisk \textit{Do all for 4  } i poczekać na zakończenie przetwarzania. Nastapi automatyczne wykrycie markerów oraz przypisanie im współrzędnych.
+    Współrzędne zostaną porównane ze współrzędnymi z pliku, a odpowiednie markery usunięte. Wynikiem działania jest plik tekstowy zawierający elementy orientacji zewnętrznej,
+    zapisany w katalogu ze zdjęciami.
+\end{enumerate}
+
+\end{document}
